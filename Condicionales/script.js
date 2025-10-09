@@ -53,3 +53,64 @@ if (total > 100) {
     console.log("Gracias por su consumo, Su total es de: " + total);
 }
 
+
+
+// 📝 Ejercicio 4: Adivina el número
+// El programa debe tener una variable con un número secreto (ej. 7), y otra con el número que el usuario intenta adivinar. Dile si acertó o no.
+
+
+let numSecreto10 = 7;
+let numUsuario10 = 7;
+
+if (numUsuario10 === numSecreto10) {
+    console.log("Adivinaste el número secreto");
+} else {
+    console.log("Sigue intentando");
+}
+
+// 🧪 Extra: ¿Quieres hacerlo con input y botón en HTML? Aquí te dejo la estructura por si quieres probarlo en una página web:
+
+let numSecreto = 9;
+
+function secreto() {
+    let numUsuario = Number(document.getElementById("numUser").value);
+    let resultado = document.getElementById("mostrarResultado");
+
+    // console.log(typeof numUsuario);
+    // console.log(typeof resultado);
+
+
+    if (numUsuario === numSecreto) {
+        resultado.innerText = "🎉 ¡Adivinaste el número secreto!";
+    } else if (numUsuario > numSecreto) {
+        resultado.innerText = "📉 Te pasaste, intenta con un número menor.";
+    } else {
+        resultado.innerText = "📈 Muy bajo, intenta con un número mayor.";
+    }
+
+}
+
+
+// 🧪 Ejercicio 5: Validar contraseña 📌 Enunciado:
+// Tienes una contraseña guardada en una variable (por ejemplo: "1234"). El usuario escribe una contraseña en un input. Al hacer clic:
+// Si es igual a la guardada: mostrar "Acceso concedido"
+// Si no: mostrar "Contraseña incorrecta"
+
+let passwordGuardada = "12345abc";
+
+function verificarPassword() {
+    let passwordUsuario = document.getElementById("passUser").value;
+    let mensaje01 = document.getElementById("mensajePassword");
+
+    if (passwordUsuario === passwordGuardada) {
+        mensaje01.innerText = "OK, Puedes ingresar";
+    } else {
+        mensaje01.innerText = "Contraseña incorrecta";
+    }
+}
+
+
+
+
+
+
