@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores</title>
+</head>
+<body>
+
+    <h1>Operadores aritméticos, de asignación, de comparación y lógicos (&&, ||, !).</h1>
+
+    <hr>
+
+    <h2>Ejercicio de la lección</h2>
+    <p>Vamos a determinar si un usuario puede obtener una licencia de conducir.</p>
+    <ol>
+        <li>Crea una constante <code>edadUsuario</code> y asígnale el valor 20.</li>
+        <li>Crea una constante pasoExamenVision y asígnale el valor true.</li>
+        <li>Crea una variable puedeObtenerLicencia.</li>
+        <li>En esa variable, guarda el resultado de verificar si edadUsuario es mayor o igual a 18 Y si pasoExamenVision es true. (Necesitarás un operador de comparación y uno lógico).</li>
+        <li>Muestra el valor de puedeObtenerLicencia en la consola. El resultado debería ser true.</li>
+    </ol>
+
+    <hr>
+
+    <h2>Ejercicio 1: Calculadora de Propinas (Básico)</h2>
+    <p>El objetivo aquí es usar operadores aritméticos y de asignación simples.</p>
+    <p><b>Indicaciones:</b></p>
+    <ol>
+        <li>Crea una variable costoTotalCuenta y asígnale el valor 250.</li>
+        <li>Crea una constante porcentajePropina y asígnale el valor 0.15 (que es el 15%).</li>
+        <li>Calcula el montoPropina multiplicando el costo de la cuenta por el porcentaje de propina.</li>
+        <li>Calcula el pagoFinal sumando el costoTotalCuenta y el montoPropina.</li>
+        <li>Muestra en la consola un mensaje claro, por ejemplo: "El costo total es: [costoTotalCuenta], la propina es: [montoPropina], el pago final es: [pagoFinal]".</li>
+    </ol>
+
+    <p><b>Ejemplo de salida esperada:</b></p>
+    <code>El costo total es: 250, la propina es: 37.5, el pago final es: 287.5</code><br><br>
+
+    <hr>
+
+    <h2>Ejercicio 2: Verificador de Acceso a un Evento (Intermedio)</h2>
+    <p>Este ejercicio se enfoca en los operadores de comparación y lógicos (&&).</p>
+    <p><b>Indicaciones:</b></p>
+    <ol>
+        <li>Crea una constante edadMinima con el valor de 18.</li>
+        <li>Crea una variable edadUsuario con un valor, por ejemplo, 25.</li>
+        <li>Crea una constante tieneBoleto con el valor true.</li>
+        <li>Crea una variable puedeIngresar que almacene el resultado de verificar si edadUsuario es mayor o igual a edadMinima Y si tieneBoleto es true.</li>
+        <li>Muestra en la consola el valor de puedeIngresar.</li>
+        <li>Prueba tu lógica: Cambia el valor de edadUsuario a 17 y vuelve a correr el código. Luego, cambia tieneBoleto a false y pruébalo de nuevo.</li>
+    </ol>
+
+    <p><b>Ejemplo de salida esperada (con los valores iniciales):</b></p>
+    <code>¿Puede ingresar al evento?: true</code><br><br>
+
+    <hr>
+
+    <h2>Ejercicio 3: Lógica de Descuento para Clientes (Intermedio-Avanzado)</h2>
+    <p>Aquí combinarás operadores lógicos && y || para una condición más compleja.</p>
+    <p><b>Indicaciones:</b></p>
+    <p>Un cliente obtiene un descuento si cumple una de estas dos condiciones:</p>
+    <ul>
+        <li>Es un clienteFrecuente Y su montoCompra es mayor a 500.</li>
+        <li>O si tiene un cuponDeDescuento válido.</li>
+    </ul>
+    <ol>
+        <li>Crea las siguientes variables:</li>
+            <ul>
+                <li>esClienteFrecuente con el valor false.</li>
+                <li>montoCompra con el valor 600.</li>
+                <li>cuponDeDescuento con el valor true.</li>
+            </ul>
+        <li>Crea una variable aplicaDescuento. Su valor debe ser el resultado de la lógica descrita arriba. Pista: Necesitarás usar paréntesis () para agrupar la primera condición.</li>
+        <li>Muestra en la consola un mensaje que diga: "El cliente aplica para descuento: [valor de aplicaDescuento]".</li>
+        <li>Juega con los valores: Cambia los valores iniciales para probar todos los escenarios y asegurarte de que tu lógica es correcta. Por ejemplo, esClienteFrecuente = true y cuponDeDescuento = false.</li>
+    </ol>
+
+    <p><b>Ejemplo de salida esperada (con los valores iniciales):</b></p>
+    <code>El cliente aplica para descuento: true</code><br><br>
+
+    <hr>
+
+    <h2>Ejercicio 4: Inversión de Estado (Avanzado)</h2>
+    <p>Este ejercicio se enfoca en el operador de negación (!) y la reasignación con +=.</p>
+    <p><b>Indicaciones:</b></p>
+    <ol>
+        <li>Crea un objeto que represente una luz (un foco).</li>
+        <code>
+            const luz = {
+                habitacion: "Sala de Estar",
+                estaEncendida: false,
+                brillo: 0
+            };
+        </code>
+        <li>Simula que enciendes la luz. Para ello, invierte el valor de estaEncendida usando el operador de negación !.</li>
+        <li>Si la luz está encendida, su brillo debe ser 100. Si está apagada, 0. Usa un operador ternario para asignar el brillo basándote en el nuevo estado de estaEncendida.</li>
+        <li>Muestra el objeto luz completo en la consola para ver el cambio.</li>
+        <li>Ahora, simula que subes el brillo. Usa el operador de asignación += para sumarle 20 al brillo actual.</li>
+        <li>Muestra un mensaje que diga "El nuevo brillo es de: [valor del brillo]".</li>
+    </ol>
+
+    <p><b>Ejemplo de salida esperada:</b></p>
+    <code>{ habitacion: 'Sala de Estar', estaEncendida: true, brillo: 100 } El nuevo brillo es de: 120</code> <br><br>
+
+
+    <hr>
+
+    <h2>Ejercio para confirmar la conexión con el archivo script.js</h2>
+    <input type="number" id="num" placeholder="Escribe un número y adivina">
+    <button onclick="adivina()">Haz clic para adivinar</button>
+    <p id="respAdivina"></p>
+
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

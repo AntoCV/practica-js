@@ -96,16 +96,19 @@ function secreto() {
 // Si es igual a la guardada: mostrar "Acceso concedido"
 // Si no: mostrar "Contraseña incorrecta"
 
-let passwordGuardada = "12345abc";
+const usuarioGuardado = "admin";
+const passwordGuardada = "12345abc";
 
 function verificarPassword() {
-    let passwordUsuario = document.getElementById("passUser").value;
-    let mensaje01 = document.getElementById("mensajePassword");
-
-    if (passwordUsuario === passwordGuardada) {
+    const usuario = document.getElementById("user").value;
+    const passwordUsuario = document.getElementById("passUser").value;
+    const mensaje01 = document.getElementById("mensajePassword");
+    
+    
+    if ( usuario === usuarioGuardado && passwordUsuario === passwordGuardada) {
         mensaje01.innerText = "OK, Puedes ingresar";
     } else {
-        mensaje01.innerText = "Contraseña incorrecta";
+        mensaje01.innerText = "El usuario o contraseña son incorrectos";
     }
 }
 
