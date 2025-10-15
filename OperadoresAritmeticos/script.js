@@ -30,12 +30,22 @@ console.log(`El cliente aplica para descuento: ${aplicaDescuento}`);
 
 
 
-// Ejercicio 4
+// Ejercicio 4 - Inversión de Estado (Avanzado)
+// Recuerda la estructura del operador ternario: propiedad_a_cambiar = (condición) ? valor_si_es_true : valor_si_es_false;
 
+const luz = {
+    habitacion: "Sala de estar",
+    estaEncendida: false,
+    brillo: 0 
+}
 
+luz.estaEncendida = !luz.estaEncendida;
 
+luz.brillo = luz.estaEncendida ? 100 : 0;
+console.log(`El brillo es de: ${luz.brillo}`);
 
-// Ejercicio 5
+luz.brillo += 20;
+console.log(`El nuevo brillo es de: ${luz.brillo}`);
 
 
 
